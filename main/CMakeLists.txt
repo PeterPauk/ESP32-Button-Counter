@@ -1,2 +1,2 @@
-idf_component_register(SRCS "blink_example_main.cpp"
+idf_component_register(SRCS "button.cpp" "main.cpp" "display.cpp"
                        INCLUDE_DIRS ".")

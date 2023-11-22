@@ -4,8 +4,9 @@
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "sdkconfig.h"
-#include "button.h"
 #include "display.h"
+#include "button.h"
+
 
 static const char *TAG = "example";
 

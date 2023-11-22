@@ -6,6 +6,7 @@
     "files.associations": {
         "*.html": "html",
         "iosfwd": "cpp",
-        "xlocbuf": "cpp"
+        "xlocbuf": "cpp",
+        "random": "cpp"
     }
 }
