@@ -6,6 +6,7 @@
 #include "sdkconfig.h"
 #include "display.h"
 #include "button.h"
+#include "led.h"
 
 
 static const char *TAG = "example";
@@ -53,7 +54,7 @@ extern "C"
         {
             vTaskDelay(50 / portTICK_PERIOD_MS);
 
-            if (button.isNotPressed() && isZero)
+            if (!button.isPressed() && isZero)
             {
                 setGpioAndCounter(0);
                 isZero = false;
@@ -64,7 +65,7 @@ extern "C"
                 setGpioAndCounter(buttonPushCounter);
                 lastButtonState = 1;
             }
-            if (button.isNotPressed())
+            if (!button.isPressed())
             {
                 lastButtonState = 0;
             }

@@ -9,9 +9,10 @@ Button::Button(gpio_num_t pin): pin(pin)
 
 bool Button::isPressed()
 {
-    return gpio_get_level(pin) == 0;
-}
-bool Button::isNotPressed()
-{
-    return gpio_get_level(pin) == 1;
+    if(gpio_get_level(pin) == 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
